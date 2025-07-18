@@ -15,7 +15,7 @@ export function Header() {
 
       <div className="flex items-center gap-4">
         {!isMobile && (
-          <div className="relative">
+          <form className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#9EABB8] w-4 h-4" />
             <Input
               type="text"
@@ -23,7 +23,7 @@ export function Header() {
               aria-label="Search site"
               className="pl-9 pr-4 bg-[#293038] text-white border-none focus:ring-0 rounded-lg h-8 w-48 placeholder:text-[#9EABB8]"
             />
-          </div>
+          </form>
         )}
         <Avatar className="w-8 h-8">
           <AvatarImage src="/avatar.jpg" alt="User avatar" />

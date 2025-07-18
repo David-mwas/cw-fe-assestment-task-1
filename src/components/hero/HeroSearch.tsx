@@ -26,6 +26,7 @@ export function HeroSearch({ initialValue = "", onSearch }: HeroSearchProps) {
         value={innerValue}
         onChange={(e) => setInnerValue(e.target.value)}
         type="text"
+        aria-label="Search input"
         placeholder="Type to search..."
         className="flex-1 bg-transparent border-none text-white placeholder:text-gray-400 focus:ring-0"
       />
