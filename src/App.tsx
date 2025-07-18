@@ -6,7 +6,7 @@ import { TagList } from "./components/TagList";
 import { tagsData } from "./data/tags";
 
 export default function App() {
-  const [tags, setTags] = useState(tagsData);
+  const [tags] = useState(tagsData);
 
   return (
     <main className="bg-[#1C2126] min-h-screen text-white">

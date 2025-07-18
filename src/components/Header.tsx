@@ -6,6 +6,10 @@ import { useIsMobile } from "@/hooks/use-mobile";
 export function Header() {
   const isMobile = useIsMobile();
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // TODO
+  };
   return (
     <header className="flex items-center justify-between px-6 lg:px-12 py-4 bg-[#1C2126] border-b border-[#9EABB8]">
       <div className="flex items-center gap-2">
@@ -15,7 +19,7 @@ export function Header() {
 
       <div className="flex items-center gap-4">
         {!isMobile && (
-          <form className="relative">
+          <form className="relative" onSubmit={handleSubmit}>
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#9EABB8] w-4 h-4" />
             <Input
               type="text"

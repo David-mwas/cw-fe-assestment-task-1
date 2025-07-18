@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
 
 export interface HeroSearchProps {
   initialValue?: string;
@@ -9,31 +9,26 @@ export interface HeroSearchProps {
 }
 
 export function HeroSearch({ initialValue = "", onSearch }: HeroSearchProps) {
-  const [query, setQuery] = useState(initialValue);
-
-  // Debounce effect
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      if (query.trim()) onSearch(query);
-    }, 500); // debounce time
-
-    return () => clearTimeout(timeout); // cleanup
-  }, [query, onSearch]);
+  const [innerValue, setInnerValue] = useState(initialValue);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSearch(query); // force immediate search on submit
+    onSearch(innerValue); // Only submit when form is submitted
   };
+
+  useEffect(() => {
+    setInnerValue(initialValue);
+  }, [initialValue]);
 
   return (
     <form
       onSubmit={handleSubmit}
       className="flex items-center bg-[#1C2126] px-4 py-2 rounded-lg w-full max-w-xl mt-6 shadow shadow-black"
     >
-      <Search className="text-gray-400 mr-3" aria-hidden="true" />
+      <Search className="text-gray-400 mr-3" />
       <Input
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        value={innerValue}
+        onChange={(e) => setInnerValue(e.target.value)}
         type="text"
         aria-label="Search input"
         placeholder="Type to search..."
