@@ -1,4 +1,3 @@
-// src/components/TagList.tsx
 import { Badge } from "@/components/ui/badge";
 
 export interface TagListProps {
@@ -9,7 +8,7 @@ export interface TagListProps {
 
 export function TagList({ title, tags, onClick }: TagListProps) {
   return (
-    <section className="mt-6 max-w-5xl mx-auto">
+    <section className="mt-6 max-w-5xl mx-auto px-6 md:px-0">
       <h2 className="text-white text-lg font-semibold mb-4">{title}</h2>
       <ul className="flex flex-wrap gap-2">
         {tags.map((tag) => (

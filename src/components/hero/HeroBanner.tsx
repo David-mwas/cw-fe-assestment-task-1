@@ -7,7 +7,7 @@ export function HeroBanner() {
   };
 
   return (
-    <section className="relative w-full max-w-5xl mx-auto rounded-xl overflow-hidden mt-8">
+    <section className="relative w-full max-w-5xl mx-auto rounded-xl overflow-hidden mt-8 shadow shadow-black">
       <img
         src="/task1/hero-bg.png"
         className="w-full h-96 object-cover"

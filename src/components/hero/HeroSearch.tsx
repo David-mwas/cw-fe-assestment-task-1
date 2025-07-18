@@ -20,7 +20,7 @@ export function HeroSearch({ initialValue = "", onSearch }: HeroSearchProps) {
   }, [initialValue]);
 
   return (
-    <form className="flex items-center bg-[#1C2126] px-4 py-2 rounded-lg w-full max-w-xl mt-6 shadow-lg">
+    <form className="flex items-center bg-[#1C2126] px-4 py-2 rounded-lg w-full max-w-xl mt-6 shadow shadow-black">
       <Search className="text-gray-400 mr-3" />
       <Input
         value={innerValue}
