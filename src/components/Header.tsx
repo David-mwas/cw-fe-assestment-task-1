@@ -7,7 +7,7 @@ export function Header() {
   const isMobile = useIsMobile();
 
   return (
-    <header className="flex items-center justify-between px-6 py-4 bg-[#121417] border-b border-[#293038]">
+    <header className="flex items-center justify-between px-6 py-4 bg-[#1C2126] border-b border-[#9EABB8]">
       <div className="flex items-center gap-2">
         <img src="/task1/logo.png" alt="" className="w-4 h-4" />
         <span className="text-white font-semibold text-lg">Wortionary</span>
