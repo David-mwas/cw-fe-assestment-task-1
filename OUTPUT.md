@@ -1,24 +1,17 @@
-[Example output - you should start from scratch]
+### Header
 
-## Changes Made
+- Extracted to `src/components/Navbar.tsx` for reusability.
+- Toggles the search input on mobile via `useIsMobile()` for better responsive UX.
+- Added `aria-label` on input and `alt=""` on logo image to satisfy accessibility.
 
-###[Component Name]
+### HeroSearch
 
-1. useEffect in line 37
-   - Issue: useEffect missing dependencies causing stale state
-   - Fix: Added required dependencies to useEffect array
-2. Accessibility issue with the search icon line 98
-   - Issue: search icon is not accessible
-   - Fix: Added search icon to the input field
+- Moved into its own component with typed props (`HeroSearchProps`).
+- Wrapped in a `<form>` so users can hit Enter to submit.
+- Added `aria-label` on the form and input; `aria-hidden` on decorative icon.
 
-### [Another Component Name]
+### HeroBanner
 
-1. ...
-   - Issue: ...
-   - Fix: ...
-2. ...
-   - Issue: ...
-   - Fix: ...
-3. ...
-   - Issue: ...
-   - Fix: ...
+- Extracted to `src/components/HeroBanner.tsx`.
+- Marked background image as decorative (`alt=""`, `aria-hidden`).
+- Responsive headline sizing (`text-2xl md:text-5xl`).
