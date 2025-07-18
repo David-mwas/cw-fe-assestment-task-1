@@ -4,6 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Header } from "./components/Header";
 
 function TagList({ title, tags }) {
   return (
@@ -73,38 +74,6 @@ function BoxArea108({
         Search
       </Button>
     </div>
-  );
-}
-
-function Header() {
-  return (
-    <header className="flex items-center justify-between px-6 py-4 bg-black border-b border-gray-800">
-      <div className="flex items-center gap-2">
-        <img src="/task1/logo.png" alt="Logo" className="w-10 h-10" />
-        <div className="text-white font-semibold text-lg">Wortionary</div>
-      </div>
-
-      <div className="flex items-center gap-4">
-        <div style={{ position: "relative" }}>
-          <span>
-            <span>
-              <span className="absolute left-3 top-2.5">
-                <Search className="text-gray-400 text-sm" />
-              </span>
-            </span>
-          </span>
-          <Input
-            type="text"
-            value="search"
-            className="pl-9 bg-gray-800 text-white border-none focus:ring-0 rounded-full"
-          />
-        </div>
-        <Avatar style={{ width: "32px", height: "32px" }}>
-          <AvatarImage src="/avatar.jpg" />
-          <AvatarFallback>U</AvatarFallback>
-        </Avatar>
-      </div>
-    </header>
   );
 }
 
