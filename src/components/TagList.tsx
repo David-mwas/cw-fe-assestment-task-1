@@ -15,7 +15,7 @@ export function TagList({ title, tags, onClick }: TagListProps) {
           <li key={tag}>
             <Badge
               onClick={() => onClick?.(tag)}
-              className="bg-[#293038] text-white hover:bg-[#293038]/80 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 px-2 py-1"
+              className="bg-[#283038] text-[#9eaab7] hover:bg-[#283038]/70 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 px-2 py-1 rounded-lg"
               role="button"
               tabIndex={0}
               aria-label={`Tag: ${tag}`}

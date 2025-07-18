@@ -9,7 +9,7 @@ export default function App() {
   const [tags] = useState(tagsData);
 
   return (
-    <main className="bg-[#1C2126] min-h-screen text-white">
+    <main className="bg-[#111416] min-h-screen text-white">
       <Header />
       <HeroBanner />
       <TagList title="Trending" tags={tags} />

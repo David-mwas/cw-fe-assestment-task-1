@@ -23,16 +23,16 @@ export function HeroSearch({ initialValue = "", onSearch }: HeroSearchProps) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex items-center bg-[#1C2126] px-4 py-2 rounded-lg w-full max-w-xl mt-6 shadow shadow-black"
+      className="flex items-center bg-[#111416] px-4 py-2 rounded-lg w-full max-w-xl mt-6 shadow shadow-black"
     >
-      <Search className="text-gray-400 mr-3" />
+      <Search className="text-[#9eaab7] mr-3" />
       <Input
         value={innerValue}
         onChange={(e) => setInnerValue(e.target.value)}
         type="text"
         aria-label="Search input"
         placeholder="Type to search..."
-        className="flex-1 bg-transparent border-none text-white placeholder:text-gray-400 focus:ring-0"
+        className="flex-1 bg-transparent border-none text-white placeholder:text-[#9eaab7] focus:ring-0"
       />
       <Button
         type="submit"
