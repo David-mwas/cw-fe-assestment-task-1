@@ -1,15 +1,22 @@
-import { Input } from "@/components/ui/input";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { Search } from "lucide-react";
+import { Input } from "./ui/input";
 import { useIsMobile } from "@/hooks/use-mobile";
 
-export function Header() {
+export function Header({
+  searchText,
+  setSearchText,
+}: {
+  searchText: string;
+  setSearchText: (value: string) => void;
+}) {
   const isMobile = useIsMobile();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO
+    console.log("Search submitted:", searchText);
   };
+
   return (
     <header className="flex items-center justify-between px-6 lg:px-12 py-4 bg-[#111416] border-b border-[#9eaab7]">
       <div className="flex items-center gap-2">
@@ -26,6 +33,8 @@ export function Header() {
               placeholder="Search"
               aria-label="Search site"
               className="pl-9 pr-4 bg-[#283038] text-white border-none focus:ring-0 rounded-lg h-8 w-32 placeholder:text-[#9EABB8] shadow"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
             />
           </form>
         )}
